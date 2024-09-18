@@ -1,0 +1,212 @@
+.pagination {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    justify-content: center;
+    margin: 20px;
+}
+
+.page-item {
+    background-color: #181818;
+    border: 1px solid rgba(255, 204, 0, 1);
+    border-radius: 5px;
+    transition: transform 0.5s, border-color 0.5s;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page-item.active {
+    background-color: #333333;
+    text-decoration: none;
+}
+
+.page-item:hover {
+    transform: scale(1.1);
+}
+
+.page-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: color 0.5s;
+}
+
+.page-item:hover .page-link {
+    color: #ffcc22;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #fff;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: #333333;
+    padding: 60px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: linear-gradient(to top, rgba(51, 51, 51, 0), rgba(51, 51, 51, 1));
+}
+
+footer {
+    background-color: #333333;
+    padding: 60px;
+    text-align: center;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(51, 51, 51, 0), rgba(51, 51, 51, 1));
+}
+
+.container {
+    padding: 30px;
+    margin: 30px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+html {
+    height: 100%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: #ffcc22;
+}
+
+.entry-menu {
+    text-align: center;
+    padding: 0px;
+    font-size: 20px;
+    margin: 20px;
+    transition: transform 0.5s;
+}
+
+.entry-menu:hover {
+    transform: scale(1.1);
+}
+
+.entry-menu-link {
+    border: 1px solid rgba(255, 204, 0, 1);
+    border-radius: 40px;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.menu {
+    justify-content: center;
+    display: flex;
+}
+.page-components {
+    text-align: center;
+    border: 1px solid rgba(255, 204, 0, 0.5);
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.components {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    border: 1px solid rgba(255, 204, 0, 0.5);
+}
+
+.entry-components {
+    text-align: center;
+    padding: 0px;
+    font-size: 20px;
+    margin: 20px;
+    transition: transform 0.5s;
+}
+
+.entry-components:hover {
+    transform: scale(1.1);
+}
+
+.entry-components-link {
+    display: block;
+    text-align: center;
+    border: 1px solid rgba(255, 204, 0, 1);
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 40px;
+    background-color: #333333;
+    font-size: 20px;
+}
+
+.info-components {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.cart-components {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.quantity-input {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    background-color: #333333;
+    color: #fff;
+    padding: 15px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 204, 0, 1);
+}
+
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-input:focus {
+    outline: none;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    font-size: 15px;
+    background-color: #181818;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: 1px solid rgba(255, 204, 0, 1);
+}
+
+.btn:hover {
+    background-color: #333333;
+    color: #ffcc22;
+}
