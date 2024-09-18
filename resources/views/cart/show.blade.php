@@ -57,20 +57,39 @@
                 @foreach ($cart as $productId => $quantity) <!-- Скрытые поля для передачи количества товаров -->
                     <input type="hidden" name="quantities[{{ $productId }}]" value="{{ $quantity }}">
                 @endforeach
-                <button type="submit" class="btn btn-success">Оформить заказ</button> <!-- Кнопка для подтверждения заказа -->
+                <button type="submit" class="btn btn-success checkout-form">Оформить заказ</button> <!-- Кнопка для подтверждения заказа -->
             </form>
         </div>
 
         <div class="components">
             <form action="{{ route('cart.clear') }}" method="POST" style="display:inline;"> <!-- Форма для очистки корзины -->
                 @csrf
-                <button type="submit" class="btn btn-danger mt-3">Очистить корзину</button> <!-- Кнопка для удаления всех товаров из корзины -->
+                <button type="submit" class="btn btn-danger mt-3 remove-button">Очистить корзину</button> <!-- Кнопка для удаления всех товаров из корзины -->
             </form>
         </div>
     @endif
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Подключение jQuery -->
     <script>
+        $('.checkout-form').click(function(event) {
+        event.preventDefault(); // Предотвращаем стандартный отправку формы
+
+        // Собираем данные формы
+        const formData = $(this).serialize();
+
+        $.ajax({
+            url: $(this).attr('cart.checkout'), // Действие формы 
+            type: $(this).attr('POST'), // Метод формы
+            data: formData, // Данные формы
+            success: function(response) {
+                
+                window.location.href = '/cart/checkout'; 
+            },
+            error: function(xhr) {
+                alert('Ошибка при оформлении заказа.'); // Уведомление об ошибке
+            }
+        });
+    });
     $(document).ready(function() {
         // Изменяем количество товара через поле ввода
         $('.quantity-input').change(function() {
